@@ -29,14 +29,14 @@ function Feature() {
   return (
     <>
       <div className='w-full min-h-screen flex flex-col items-center justify-center'>
-        <div className='mt-10 bg-zinc-900 flex gap-8 items-center justify-center px-2 py-2 rounded-xl'>
+        <div className='w-80 sm:w-auto mt-10 bg-zinc-900 flex sm:gap-8 items-center justify-center flex-nowrap px-2 py-2 rounded-xl'>
           <form onSubmit={searchHandler}>
             <input
               onChange={inputHandler}
               required
               list='coinlist'
               value={input}
-              className='text-md px-2 text-white max-w-lg w-80 placeholder-zinc-200 bg-transparent outline-none'
+              className='text-md px-2 text-white max-w-lg placeholder-zinc-200 bg-transparent outline-none'
               type="text" placeholder='Search any currency' />
 
             <datalist id='coinlist'>
@@ -65,7 +65,7 @@ function Feature() {
             <Link
               to={`/coin/${item.id}`}
               key={index}
-              className="bg-black/30 max-w-7xl sm:h-auto mt-1 rounded-lg text-white px-3 py-2 grid grid-cols-3 gap-x-10 lg:grid-cols-5 items-center text-sm sm:text-md hover:bg-black/50 transition"
+              className=" bg-zinc-950 max-w-7xl sm:h-auto mt-1 rounded-lg text-white px-3 py-2 grid grid-cols-3 gap-x-10 lg:grid-cols-5 items-center text-sm sm:text-md hover:bg-black/50 transition"
             >
               <div className="text-center col-span-1">{item.market_cap_rank}</div>
               <div className="text-left col-span-1">
