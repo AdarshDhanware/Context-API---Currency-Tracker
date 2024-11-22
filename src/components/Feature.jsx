@@ -30,25 +30,29 @@ function Feature() {
     <>
       <div className='w-full min-h-screen flex flex-col items-center justify-center'>
         <div className='w-80 sm:w-auto mt-10 bg-zinc-900 flex sm:gap-8 items-center justify-center flex-nowrap px-2 py-2 rounded-xl'>
-          <form onSubmit={searchHandler}>
+          <form
+            onSubmit={searchHandler}
+            className='flex items-center gap-3 w-full'>
             <input
               onChange={inputHandler}
               required
               list='coinlist'
               value={input}
-              className='text-md px-2 text-white max-w-lg placeholder-zinc-200 bg-transparent outline-none'
-              type="text" placeholder='Search any currency' />
-
+              className='text-md px-4 py-2 text-white w-full sm:w-72 placeholder-zinc-200 bg-transparent outline-none rounded-lg'
+              type="text"
+              placeholder='Search any currency' />
+            <button
+              className='text-md text-white px-5 py-2 rounded-lg bg-blue-600'>
+              Search
+            </button>
             <datalist id='coinlist'>
               {allCoin.map((item, index) => (
                 <option key={index} value={item.name} />
               ))}
             </datalist>
-
-            <button
-              className='text-md text-white px-5 py-2 rounded-lg bg-blue-600'>Search</button>
           </form>
         </div>
+
         {/* Table */}
         <div className='px-5 py-2'>
           {/* Table heading */}
