@@ -1,7 +1,7 @@
 # **💱 Currency Tracker**  
 
 ## 🚀 Live Demo  
-[Click here to view the live site](https://currencytrackerxo.netlify.app/feature)  
+[Click here to view the live site](https://currencytrackerxo.netlify.app)  
 
 ## 📌 Project Overview  
 The **Currency Tracker** is a **React.js-based** frontend application that fetches real-time exchange rates using an API. It provides users with an easy-to-use interface to track and compare different currencies.  
